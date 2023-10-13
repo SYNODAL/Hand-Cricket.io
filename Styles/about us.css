@@ -1,0 +1,131 @@
+.about{
+    --scale_abt:0;
+    transform-origin: top left;
+    transition: all 0.35s;
+    scale: var(--scale_abt);
+    position: fixed;
+    z-index: 100;
+    background-color: #0f0e0e;
+    height: 100vh;
+    width: 100vw;
+}
+
+.close{
+    z-index: 101;
+    position: relative;
+    height: 8.2vh;
+    width: 4.5vw;
+    border-radius: 50%;
+}
+.close img{
+    position: absolute;
+    left: 0.01rem;
+    top: 0;
+    height: 7.1vh;
+    width: 4vw;
+    border: 0.19rem solid #3BC14A;
+    border-radius: 50%;
+}
+
+.close:hover{
+    cursor: pointer;
+    box-shadow: 0.19rem 0.19rem 0.3rem #BD0076;
+}
+
+.pic{
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.pic img{
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.05;
+}
+
+.abt{
+    position: relative;
+    z-index: 101;
+    top: 0;
+}
+
+.abt img{
+    width: 20%;
+    position: absolute;
+    transform: translate(-50%, -20%);
+    left: 50%;
+    box-shadow: 0rem 0rem 0.3rem #BD0076;
+    border-radius: 10px;
+}
+
+.txt{
+    position: absolute;
+    color: antiquewhite;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 2rem;
+    margin-top: 15%;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.cred{
+    padding: 2rem;
+    position: fixed;
+    top: 70%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
+}
+
+.cred h2{
+    color: antiquewhite;
+    text-decoration: underline dashed;
+}
+
+hr{
+    position: fixed;
+    width: 100vw;
+    top: 70%;
+}
+
+.cred a:link{
+    color: #bd0076;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+.cred a:hover{
+    color: #3BC14A;
+}
+
+.cred a:visited{
+    color: #007552;
+}
+
+@media(1300px <= width < 1800px){
+    .txt{
+        font-size: 1.09rem;
+    }
+
+
+    .cred a:link, .cred h2{
+        font-size: 1.01rem;
+    }
+}
+
+@media (640px <= width <= 961px) and (orientation: landscape){
+    .txt{
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+
+    .cred h2, .cred a:link{
+        font-size: 0.7rem;
+    }
+}
+
+
+
+

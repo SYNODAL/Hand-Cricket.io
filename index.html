@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAND CRICKET IO</title>
+    <link rel="stylesheet" href="./Styles/font.css"> 
+    <link rel="stylesheet" href="./Styles/homepage.css">
+    <link rel="stylesheet" href="./Styles/how to play.css">
+    <link rel="stylesheet" href="./Styles/toss.css">
+    <link rel="stylesheet" href="./Styles/Innings.css">
+    <link rel="stylesheet" href="./Styles/playing window.css">
+    <link rel="stylesheet" href="./Styles/about us.css">
+</head>
+<body>
+    <!--     HEADER    -->
+
+    <div class="heading">
+        <div class="logo" data-logo="About us" onclick="about()"><img src="./Logo.png" alt="Logo"></div>
+        <div class="inst" data-htp="How to play" ><button class="htp" id="htp" onclick="change()">?</button></div>
+    </div>
+    <button class="volume" id="vol" onclick="mute()"><img id="mut" src="./Image/volume.png" alt="volume"></button>
+    <div class="title">
+        <h1>HAND-CRICKET</h1>
+    </div>
+
+    <!-- ABOUT US -->
+
+    <div class="about" id="babt">
+        <button class="close" onclick="about()">
+            <img src="./Logo.png" alt="Logo">
+        </button>
+        <div class="pic">
+            <img src="./Logo.png" alt="logo">
+        </div>
+
+        <div class="abt">
+           <img src="./Logo.png" alt="logo">
+           <p class="txt">
+                <b>Hi!</b> Here at <strong>Synodal</strong>, we are a small team of 4 with aspirations of making it big in the market of web development.<br>
+                We are currently learning the process and are creating capstone(Milestone) projects as we learn.<br>
+                <strong>We aim to make, robust, expansive and versatile websites as well as web applications.</strong><br>
+                Our Capstone projects aims to display not only technical expertise but also imaginative prowess to handle even the most out of the box demands of the clients.<br>
+                Thank you for visiting our website, we hope to impress you further in the future!
+            </p>
+            <hr>
+            <div class="cred">
+                <h2>Credits:-</h2>
+                <a href="https://www.flaticon.com/free-icons/mute" title="mute icons">Mute icons created by pictranoosa - Flaticon</a> &nbsp;
+                <a href="https://www.flaticon.com/free-icons/cricket-ground" title="cricket ground icons">Cricket ground icons created by vectorsmarket15 - Flaticon</a>&nbsp;
+                <a href="https://www.flaticon.com/free-icons/cricket-helmet" title="cricket helmet icons">Cricket helmet icons created by juicy_fish - Flaticon</a>&nbsp;<br>
+                <a href="https://www.flaticon.com/free-icons/sport-equipment" title="sport equipment icons">Sport equipment icons created by Freepik - Flaticon</a>&nbsp;
+                <a href="https://www.flaticon.com/free-icons/cricket" title="cricket icons">Cricket icons created by Smashicons - Flaticon</a>&nbsp;
+                <a href="https://www.flaticon.com/free-icons/sports-and-competition" title="sports and competition icons">Sports and competition icons created by Freepik - Flaticon</a>&nbsp;<br>
+                <a href="https://www.flaticon.com/free-icons/cricket" title="cricket icons">Cricket icons created by Freepik - Flaticon</a> &nbsp;
+                <a href="https://www.flaticon.com/free-icons/cricket-ball" title="cricket ball icons">Cricket ball icons created by O.moonstd - Flaticon</a> &nbsp;
+                <a href="https://www.flaticon.com/free-icons/sports-and-competition" title="sports and competition icons">Sports and competition icons created by Freepik - Flaticon</a> &nbsp;<br>
+                <a href="https://www.flaticon.com/free-icons/volume" title="volume icons">Volume icons created by Icon mania - Flaticon</a> &nbsp;
+                <a href="https://freesound.org/people/orginaljun/">Backgroung Music Provided by Orginaljun - www.freesoung.org</a>
+                
+            </div> 
+        </div>
+    </div>
+
+
+    <!--    FREEZE LAYER AND RULES     -->
+    <div class="orient">
+        <div class="device">
+            <div class="dev"></div>
+        </div>
+        <div class="msg">Please Rotate Your device</div>
+    </div>
+    <div class="freeze" id="frz"></div>
+    <div class="rules" id="rls">
+        <div class="close" ><button id="cls" onclick="change()">X</button></div>
+       <p><h2>Hand cricket is a simple game that can be played by two people. Here are the rules:</h2></p>
+            <li>Overs: Choose how many Overs you want to play - 5 Overs/10 Overs/15 Overs.</li>
+            <li>Total no of Wickets: You will get 7 wickets for this game.</li>
+            <li>Toss: The player to toss chooses either heads or tails,if player wins the toss, they choose batting or bowling.</li>
+            <li>Batting: The batsman throws a number from 1 to 6, if the number they thrown is different from the number the computer throws, they score that number of runs.</li>
+            <li>Bowling: The bowler throws a number from 1 to 6, if the number thrown is the same as the number the batsman throws, the batsman is out.</li>
+            <li>Out: A player is out if they throw the same number as the other player.</li>
+    </div>
+
+    <!--       OVER SELECTION      -->
+
+    <div class="overs" id="ovr">
+        <button class="btn1" value="5" id="ovr5" onclick="overget(5)">5 Overs</button>
+        <button class="btn2" value="10" id="ovr10" onclick="overget(10)">10 Overs</button>
+        <button class="btn3" value="15" id="ovr15" onclick="overget(15)">15 Overs</button>
+    </div>
+
+    <!--    Toss   -->
+
+    <div class="toss" id="ts">
+        <div class="motionlayer" id="ml">
+            <div class="coin" id="coin">
+                <div class="hds">
+                    <img src="./Image/Untitled.png" alt="heads">   
+                </div>
+                <div class="tls">
+                    <img src="./Image/Tails.png" alt="tails">
+                </div>
+            </div> 
+        </div>
+        <div class="opt">
+            <button class="hdsbtn" id="hds" value= 1 onclick="tossfunc(document.getElementById('hds').value)">HEADS</button>
+            <button class="tlsbtn" id="tls" value= 0 onclick="tossfunc(document.getElementById('tls').value)">TAILS</button>
+        </div>
+    </div>
+
+    <!--     Toss result     -->
+
+    <div class="tosrlt" id="rts">
+        <h1></h1>
+    </div>
+    
+    <!--    Innings Selection-->
+
+    <div class="innings" id="ing">
+        <h2 class="bat-title">BAT</h2>
+        <h2 class="bowl-title">BOWL</h2>
+        <div class="icons">
+            <div class="bat" value= "1" id="ba" onclick="press(1)"><img src="./Image/bat.png" alt="Batting"></div>
+            <div class="ball" value= "0" id="bo"onclick="press(0)" ><img src="./Image/cricket-ball.png" alt="Bowling"></div>
+                
+        </div>
+    </div>
+
+    <!--       Playing window       -->
+
+    <div class="container" id="cntr">
+        
+        <div class="plr">Player </div>
+        <div class="com">Computer</div>
+        <!--    Score Window   -->
+        <div class="score-window">
+            <div class="player" ><div class="player-motion" id="plrwnd"><img  id="pim" src="./Image/player 0.png" alt=""></div></div>
+            <div class="runs" id = "rcty" ><div class="runsanimation" id="ra"><span id="rns"></span></div></div>
+            <div class="computer" ><div class="computer-motion" id="comp"><img  id="cim" src="./Image/computer 0.png" alt=""></div></div>
+        </div>
+
+        <!--    buttons    -->
+        <div class="buttons" id="bnt">
+            <button class="bn 0" id="00" value="0" onclick="el()">0</button>
+            <button class="bn 1" id="11" value="1" onclick="el()">1</button>
+            <button class="bn 2" id="22" value="2" onclick="el()">2</button>
+            <button class="bn 3" id="33" value="3" onclick="el()">3</button>
+            <button class="bn 4" id="44" value="4" onclick="el()">4</button>
+            <button class="bn 5" id="55" value="5" onclick="el()">5</button>
+            <button class="bn 6" id="66" value="6" onclick="el()">6</button>
+        </div>
+
+        <!--     Over Events-->
+
+        <div class="over-events">
+            <span id="1">-</span>
+            <span id="2">-</span>
+            <span id="3">-</span>
+            <span id="4">-</span>
+            <span id="5">-</span>
+            <span id="6">-</span>
+        </div>
+
+        <!--    Score Board    -->
+        
+        <div class="score-board" id="sb">
+            <div class="run-over-wicket"><span id="run">RUNS/</span><span id="wckt">WICKET</span></div>
+            <div><span id="ovrbls">OVERS(BALLS)</span></div>
+        </div>
+
+        <!--   Run-rate and overhistory   -->
+
+        <div class="runrate-n-overhistory" id="rb">
+            <span id="rr">RUNRATE</span>
+            <span id="his">In last over</span>
+        </div>
+
+        <!-- half-time -->
+        <div class="halftime" id="ht">
+            <h1 id="htt"></h1>
+        </div>
+
+        <!-- full-time -->
+
+        <div class="fulltime" id="ft">
+            <h1 id="ftt"></h1>
+            <button onclick="reload()">Play Again</button>
+        </div>
+
+        <!-- Target -->
+
+        <div class="target" id="t">
+            <h1><span id="trgt"></span></h1>
+        </div>
+
+    </div>
+    <script src="./script.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+.innings{
+    --scale_ing: 0;
+    position: fixed;
+    background-color: #3BC14A;
+    top: 23%;
+    left: 21%;
+    width: 58vw;
+    height: 60vh;
+    border-radius: 1.9rem;
+    opacity: 0.75;
+    transform: scale(var(--scale_ing));
+    transition: transform 0.2s;
+}
+
+.bat-title,.bowl-title{
+    display: inline-block;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+}
+
+.bat-title{
+    margin-left: 19%;
+}
+
+.bowl-title{
+    margin-left: 39%;
+}
+
+.icons{
+    display: flex;
+    height: 70%;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.icons img{
+    height: 80%;
+}
+
+.bat, .ball{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:45%;
+    border: 0.125rem dashed black;
+    border-radius: 1.9rem;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.bat:hover, .ball:hover{
+    cursor: pointer;
+    background-color:#FFFDD0 ;
+    border-radius: 1.9rem;
+    border-color: #FFFDD0 ;
+}
+
+@media (962px <= width < 1280px) and (orientation: Landscape) {
+    .bowl-title{
+        margin-left: 37%;
+    }
+}
+
+@media (640px <= width <= 961px){
+    .bat,.ball{
+        height: 85%;
+    }
+
+    .bowl-title{
+        margin-left: 30%;
+    }
+}
+
+

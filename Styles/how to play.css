@@ -1,0 +1,85 @@
+.rules{
+    --scale_rls: 0;
+    position: fixed;
+    top: 10%;
+    z-index: 100;
+    margin: 0vh 25vw;
+    padding: 2%;
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px white;
+    transform: scale(var(--scale_rls));
+    transition: transform 50ms;
+}
+
+.rules h2{
+    font-size: 1.6rem;
+}
+
+.rules li{
+    font-size: 1.01rem;
+    margin: 5% 0%;
+    text-align: center;
+}
+
+.freeze{
+    --scale_frz: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color:black;
+    z-index: 100;
+    position: fixed;
+    top: 0%;
+    opacity: 0.7;
+    transform: scale(var(--scale_frz));
+    transition: transform 50ms;
+}
+
+.close{
+    position: relative;
+}
+
+.close button{
+    position: absolute;
+    left: 98.5%;
+    transform: translateY(-80%);
+    border: 0;
+    border-radius: 50%;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    background-color: black;
+    color: white;
+}
+
+.close:hover button{
+    cursor: pointer;
+    box-shadow: 0px 0.06rem 0.32rem white;
+}
+
+@media (962px <= width < 1280px) and (orientation: Landscape){
+    .close button{
+        left: 96%;
+        bottom: -0.06rem;
+        transform: translateY(00.93rem);
+    }
+}
+
+@media (640px <= width <= 961px) and (orientation: landscape){
+    .rules h2{
+        font-size: 1.04rem;
+    }
+
+    .rules li{
+        font-size: 0.75rem;
+    }
+
+    .close button{
+        left: 94%;
+        bottom: -0.06rem;
+        transform: translateY(00.93rem);
+        font-size: 1rem;
+    }
+}
