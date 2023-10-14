@@ -37,11 +37,11 @@
     transition: transform 50ms;
 }
 
-.close{
+.clse{
     position: relative;
 }
 
-.close button{
+.clse button{
     position: absolute;
     left: 98.5%;
     transform: translateY(-80%);
@@ -54,13 +54,13 @@
     color: white;
 }
 
-.close:hover button{
+.clse:hover button{
     cursor: pointer;
     box-shadow: 0px 0.06rem 0.32rem white;
 }
 
 @media (962px <= width < 1280px) and (orientation: Landscape){
-    .close button{
+    .clse button{
         left: 96%;
         bottom: -0.06rem;
         transform: translateY(00.93rem);
@@ -76,7 +76,7 @@
         font-size: 0.75rem;
     }
 
-    .close button{
+    .clse button{
         left: 94%;
         bottom: -0.06rem;
         transform: translateY(00.93rem);
